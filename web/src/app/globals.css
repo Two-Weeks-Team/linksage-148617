@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f5f7fa;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --muted: #e5e7eb;
+  --border: #d1d5db;
+  --primary: #2563eb;
+  --accent: #10b981;
+  --radius: 0.5rem;
+  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+html, body {
+  background: radial-gradient(circle at 10% 20%, var(--muted) 0%, var(--background) 100%);
+  color: var(--foreground);
+  font-smoothing: antialiased;
+}
+
+* {
+  border-color: var(--border);
+}
+
+button {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+button:active {
+  transform: scale(0.98);
+}
